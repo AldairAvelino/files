@@ -1,0 +1,78 @@
+localhost_docker =
+  (DESCRIPTION=
+    (ADDRESS=
+      (PROTOCOL=TCP)
+      (HOST= 127.0.0.1)
+      (PORT=1521)
+    )
+    (CONNECT_DATA=
+      (SID=orcl)
+    )
+  )
+ 
+
+SIGFE_DEV=
+  (DESCRIPTION=
+    (ADDRESS=
+      (PROTOCOL=TCP)
+      (HOST=192.168.246.130)
+      (PORT=1521)
+    )
+    (CONNECT_DATA=
+      (SID=sigfedb)
+    )
+  )
+
+SIGFE_HML=
+  (DESCRIPTION=
+    (ADDRESS=
+      (PROTOCOL=TCP)
+      (HOST=192.168.245.130)
+      (PORT=1521)
+    )
+    (CONNECT_DATA=
+      (SID=sigfedb)
+    )
+  )
+
+SIGFE_PRE =
+  (DESCRIPTION=
+    (ADDRESS_LIST=
+        (LOAD_BALANCE=YES)
+        (FAILOVER=YES)
+        (ADDRESS=
+          (PROTOCOL=tcp)
+          (HOST=sigfe-pre-scan.minfin.gov.ao)
+          (PORT=1521)
+        )
+    )
+    (CONNECT_DATA=
+        (SERVICE_NAME=sigfedbpre.minfin.gv.ao)
+    )
+  )
+
+PORTAIS_DEV=
+  (DESCRIPTION=
+    (ADDRESS=
+      (PROTOCOL=TCP)
+      (HOST=tunda.minfin.gov.ao)
+      (PORT=1521)
+    )
+    (CONNECT_DATA=
+      (SERVICE_NAME=pdbwce.minfin.gv.ao)
+    )
+  )
+
+PORTAIS_HML =
+ (DESCRIPTION =
+   (ADDRESS_LIST =
+     (ADDRESS = 
+      (PROTOCOL = TCP)
+      (HOST = bocoio.minfin.gov.ao)
+      (PORT = 1521)
+    )
+   )
+   (CONNECT_DATA =
+     (SERVICE_NAME = wcehml.minfin.gov.ao)
+   )
+ )
